@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="manifest" href="manifest.json">
-  <title>Swords and Sandals 2</title>
+  <title>Juegos Flash Offline</title>
   <style>
+    * { box-sizing: border-box; }
     body, html {
       margin: 0;
       padding: 0;
@@ -30,7 +31,7 @@
 
   <div id="waflashContainer"></div>
 
-  <!-- Script optimizado para inicializar WaFlash sin pantalla en negro -->
+  <!-- Configuración de WaFlash -->
   <script>
     var Watson = {
       swf: "juego.swf",
@@ -41,12 +42,12 @@
   </script>
   <script src="https://www.htmlgames.com/embed/waflash/waflash.js"></script>
 
+  <!-- Registro del Service Worker para funcionamiento Offline -->
   <script>
-    // Registrar Service Worker para jugar sin internet
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
-        .then(() => console.log("Service Worker registrado"))
-        .catch(err => console.error("Error SW:", err));
+        .then(() => console.log("Service Worker registrado con éxito"))
+        .catch(err => console.error("Error al registrar Service Worker:", err));
     }
   </script>
 
