@@ -1,10 +1,10 @@
-const CACHE_NAME = 'flash-offline-v1';
+const CACHE_NAME = 'flash-waflash-v1';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './juego.swf',
-  'https://unpkg.com/@ruffle-rs/ruffle'
+  'https://cdn.jsdelivr.net/gh/waflash/waflash-core@master/waflash-player.min.js'
 ];
 
 self.addEventListener('install', (e) => {
