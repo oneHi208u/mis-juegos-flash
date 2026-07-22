@@ -1,10 +1,10 @@
-const CACHE_NAME = 'waflash-offline-v1';
+const CACHE_NAME = 'waflash-cache-v1';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
   './juego.swf',
-  'https://www.htmlgames.com/embed/waflash/waflash.js'
+  'https://cdn.jsdelivr.net/gh/waflash/waflash-core@master/waflash-player.min.js'
 ];
 
 self.addEventListener('install', (e) => {
