@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <title>Mi Juego Flash</title>
+  <style>
+    body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    #container { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("container");
+      container.appendChild(player);
+      player.load("juego.swf"); // Tu archivo SWF
+    });
+
+    // Registrar el Service Worker para jugar sin internet
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
