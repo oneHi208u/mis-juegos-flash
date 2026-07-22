@@ -1,4 +1,4 @@
-const CACHE_NAME = 'flash-waflash-v2';
+const CACHE_NAME = 'waflash-offline-v1';
 const ASSETS = [
   './',
   './index.html',
