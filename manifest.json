@@ -1,6 +1,6 @@
 {
   "name": "Juegos Flash Offline",
-  "short_name": "FlashApp",
+  "short_name": "FlashOffline",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
