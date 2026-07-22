@@ -46,12 +46,14 @@
       const player = ruffle.createPlayer();
       const container = document.getElementById("container");
 
-      // Configuración de Ruffle para permitir permisos de scripts y mejor renderizado
+      // Configuración de Ruffle ajustada para scripts antiguos (AS2)
       player.config = {
         "allowScriptAccess": true,
         "forceScale": true,
         "quality": "high",
-        "wmode": "window"
+        "wmode": "window",
+        "letterbox": "on",
+        "upgradeToHttps": false
       };
 
       container.appendChild(player);
